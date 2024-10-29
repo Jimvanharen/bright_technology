@@ -3,7 +3,7 @@ const { default: Redis } = require("ioredis");
 const app = express();
 const port = 4000;
 
-const redis = new Redis();
+const redis = new Redis({host: "redis", port: 6379});
 
 app.use(express.json());
 
